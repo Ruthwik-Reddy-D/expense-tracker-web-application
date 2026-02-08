@@ -10,7 +10,7 @@ ExpenseFlow is a full-stack expense tracker built with HTML, CSS, JavaScript, No
 - Chart visualizations with Chart.js
 
 ## Live Demo
-Add your live demo URL here after deployment: **[https://your-demo-link.com](https://your-demo-link.com)**
+Add your live demo URL here after deployment: **https://expensetrackwebapplication.netlify.app/**
 
 ## Getting Started
 
