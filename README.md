@@ -10,7 +10,7 @@ ExpenseFlow is a full-stack expense tracker built with HTML, CSS, JavaScript, No
 - Chart visualizations with Chart.js
 
 ## Live Demo
-Add your live demo URL here: **[https://your-demo-link.com](https://your-demo-link.com)**
+Add your live demo URL here after deployment: **[https://your-demo-link.com](https://your-demo-link.com)**
 
 ## Getting Started
 
@@ -39,3 +39,11 @@ Add your live demo URL here: **[https://your-demo-link.com](https://your-demo-li
 - Add AI chatbot for expense summaries
 - Deploy to Render/Netlify + MongoDB Atlas
 
+## Deployment (Render + MongoDB Atlas)
+1. Create a free MongoDB Atlas cluster and copy the connection string.
+2. Create a new Render Web Service from this GitHub repo.
+3. Set environment variables in Render:
+   - `MONGO_URI` = your Atlas connection string
+   - `JWT_SECRET` = a strong random secret
+   - `PORT` = 3000
+4. Deploy. When complete, copy the Render URL and update the Live Demo link above.

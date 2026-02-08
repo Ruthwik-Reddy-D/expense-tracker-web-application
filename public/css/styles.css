@@ -282,6 +282,11 @@ button {
   font-size: 0.85rem;
 }
 
+.muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .stacked {
   display: flex;
   flex-direction: column;
