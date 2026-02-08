@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExpenseFlow | Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">EF</span>
+          <div>
+            <h1>ExpenseFlow</h1>
+            <p>Smart expense tracker</p>
+          </div>
+        </div>
+        <nav>
+          <button class="nav-link active">Overview</button>
+          <button class="nav-link" id="logout">Logout</button>
+        </nav>
+        <div class="sidebar-card">
+          <h3>Quick add income</h3>
+          <form id="income-form">
+            <label>
+              Source
+              <input type="text" name="source" required />
+            </label>
+            <label>
+              Amount
+              <input type="number" name="amount" min="0" step="0.01" required />
+            </label>
+            <button type="submit" class="secondary">Add income</button>
+          </form>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="content-header">
+          <div>
+            <h2>Your expenses</h2>
+            <p>Track spending, income, and savings.</p>
+          </div>
+          <div class="filters">
+            <select id="period-filter">
+              <option value="daily">Today</option>
+              <option value="weekly">Last 7 days</option>
+              <option value="monthly">Last 30 days</option>
+            </select>
+          </div>
+        </header>
+
+        <section class="kpi-grid">
+          <div class="kpi-card">
+            <h4>Total expenses</h4>
+            <p id="total-expenses">$0</p>
+          </div>
+          <div class="kpi-card">
+            <h4>Total income</h4>
+            <p id="total-income">$0</p>
+          </div>
+          <div class="kpi-card">
+            <h4>Savings</h4>
+            <p id="total-savings">$0</p>
+          </div>
+        </section>
+
+        <section class="grid">
+          <div class="card">
+            <h3>Add expense</h3>
+            <form id="expense-form" class="stacked">
+              <label>
+                Title
+                <input type="text" name="title" required />
+              </label>
+              <label>
+                Amount
+                <input type="number" name="amount" min="0" step="0.01" required />
+              </label>
+              <label>
+                Category
+                <input type="text" name="category" required />
+              </label>
+              <label>
+                Notes
+                <input type="text" name="notes" />
+              </label>
+              <button type="submit" class="primary">Save expense</button>
+            </form>
+          </div>
+
+          <div class="card">
+            <h3>Spending by category</h3>
+            <canvas id="categoryChart" height="220"></canvas>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <h3>Recent expenses</h3>
+          </div>
+          <div id="expense-list" class="list"></div>
+        </section>
+
+        <section class="card">
+          <h3>Income entries</h3>
+          <div id="income-list" class="list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+  </body>
+</html>

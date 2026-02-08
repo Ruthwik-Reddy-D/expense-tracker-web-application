@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExpenseFlow | Login</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main class="auth-layout">
+      <section class="auth-card">
+        <div class="brand">
+          <span class="brand-mark">EF</span>
+          <div>
+            <h1>ExpenseFlow</h1>
+            <p>Track daily spending, income, and savings in one place.</p>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <button class="tab active" data-tab="login">Login</button>
+          <button class="tab" data-tab="register">Register</button>
+        </div>
+
+        <form id="login-form" class="form-section active">
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" required />
+          </label>
+          <button type="submit" class="primary">Login</button>
+        </form>
+
+        <form id="register-form" class="form-section">
+          <label>
+            Full name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" required />
+          </label>
+          <button type="submit" class="primary">Create account</button>
+        </form>
+
+        <div id="auth-message" class="message"></div>
+      </section>
+      <section class="auth-highlight">
+        <h2>Stay on top of your money.</h2>
+        <ul>
+          <li>Daily, weekly, or monthly expense filters.</li>
+          <li>Income tracking with savings insights.</li>
+          <li>Simple charts that keep you focused.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="/js/auth.js"></script>
+  </body>
+</html>
